@@ -1,0 +1,91 @@
+/* 根容器：只占屏幕右侧 220px，左侧不画任何东西，棋盘完全露出 */
+.score-root {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 220px;
+    flex-direction: column;
+}
+
+/* 右侧信息栏，铺满根容器 */
+.info-panel {
+    flex-grow: 1;
+    width: 100%;
+    background-color: #f7f7f7;
+    border-left-width: 1px;
+    border-left-color: #dddddd;
+    border-left-style: solid;
+    flex-direction: column;
+}
+
+.info-header {
+    height: 80px;
+}
+
+.info-body {
+    flex-grow: 1;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    justify-content: flex-start;
+}
+
+.info-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.info-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.info-value {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* 按钮行 */
+.button-row {
+    flex-direction: column;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.game-button {
+    height: 44px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    -unity-font-style: bold;
+    border-radius: 8px;
+}
+
+.game-button--primary {
+    background-color:rgb(232, 223, 212);
+    color: #333333;
+    border-width: 0;
+}
+
+.game-button--primary:hover {
+    background-color: #f5efe6;
+}
+
+.game-button--secondary {
+    background-color: #f0f0f0;
+    color: #333333;
+    border-width: 1px;
+    border-color: #cccccc;
+}
+
+.game-button--secondary:hover {
+    background-color: #e0e0e0;
+}

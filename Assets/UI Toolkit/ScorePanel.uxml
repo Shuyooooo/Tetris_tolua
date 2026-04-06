@@ -1,0 +1,30 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements"
+         editor="UnityEditor.UIElements"
+         noNamespaceSchemaLocation="UnityEngine.UIElements/UIElements.xsd"
+         editor-extension-mode="False">
+    <ui:Style src="ScorePanel.uss" />
+
+    <!-- 根容器：只占右侧一条，左侧完全不画，棋盘在 Canvas 上露出来 -->
+    <ui:VisualElement name="root" class="score-root">
+        <ui:VisualElement name="infoPanel" class="info-panel">
+            <ui:VisualElement name="infoHeader" class="info-header" />
+
+            <ui:VisualElement name="infoBody" class="info-body">
+                <ui:VisualElement class="info-row">
+                    <ui:Label text="High Score" class="info-title" />
+                    <ui:Label name="highScoreLabel" text="0" class="info-value" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="info-row">
+                    <ui:Label text="Score" class="info-title" />
+                    <ui:Label name="scoreLabel" text="0" class="info-value" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="button-row">
+                    <ui:Button name="startButton" text="Start" class="game-button game-button--primary" />
+                    <ui:Button name="restartButton" text="Restart" class="game-button game-button--secondary" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
